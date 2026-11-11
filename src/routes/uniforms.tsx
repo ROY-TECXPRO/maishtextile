@@ -2,7 +2,6 @@ import { createFileRoute } from "@tanstack/react-router";
 import { useState, useEffect } from "react";
 import { X } from "lucide-react";
 import { CategoryGrid, Container, CtaBand, SectionHead, Reveal, meta } from "@/components/site";
-import { GlassButton } from "@/components/ui/glass-button";
 import { waLink } from "@/lib/site";
 import { IMG } from "@/lib/site";
 
@@ -284,7 +283,7 @@ function Uniforms() {
           title="Specialist Uniforms"
           text="Detailed views with multiple images per category."
         />
-        <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="grid grid-cols-2 gap-3 md:gap-5 lg:grid-cols-3">
           {customCategories.map((cat, i) => (
             <Reveal key={cat.id} delay={i * 80}>
               <div
@@ -365,23 +364,21 @@ function Uniforms() {
                 ))}
               </ul>
               <div className="mt-6 flex flex-wrap gap-3">
-                <GlassButton variant="signal" asChild>
-                  <a
-                    href={waLink(`Hello Maish, I'd like to enquire about ${openCategory.title}.`)}
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    Enquire on WhatsApp
-                  </a>
-                </GlassButton>
-                <Link
-                  to={openCategory.to}
+                <a
+                  href={waLink(`Hello Maish, I'd like to enquire about ${openCategory.title}.`)}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="bg-signal px-5 py-3 text-sm font-bold text-signal-foreground"
+                >
+                  Enquire on WhatsApp
+                </a>
+                <a
+                  href={openCategory.to}
                   onClick={() => setOpenCategory(null)}
-                  prefetchIntent="hover"
-                  className="border border-border px-5 py-3 text-sm font-bold hover:border-primary rounded-md glass-hover glass-fill"
+                  className="border border-border px-5 py-3 text-sm font-bold hover:border-primary"
                 >
                   View Page
-                </Link>
+                </a>
               </div>
             </div>
           </div>

@@ -2,7 +2,6 @@ import { createFileRoute } from "@tanstack/react-router";
 import { useState, useEffect } from "react";
 import { X } from "lucide-react";
 import { Container, CtaBand, Reveal, SectionHead, meta } from "@/components/site";
-import { GlassButton } from "@/components/ui/glass-button";
 import { IMG, waLink } from "@/lib/site";
 
 export const Route = createFileRoute("/mattress-center")({
@@ -131,7 +130,7 @@ function Mattress() {
           title="Explore Mattress Brands"
           text="Visit the showroom or message us for current sizes and availability for each brand."
         />
-        <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 md:gap-5">
+        <div className="grid grid-cols-2 gap-3 md:gap-5">
           {brands.map((b, i) => (
             <Reveal key={b.name} delay={i * 80}>
               <article
@@ -217,25 +216,23 @@ function Mattress() {
                 ))}
               </ul>
               <div className="mt-6 flex flex-wrap gap-3">
-                <GlassButton variant="signal" asChild>
-                  <a
-                    href={waLink(
-                      `Hello Maish, I'm interested in ${openBrand.name} mattresses. Which sizes are available?`,
-                    )}
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    Enquire on WhatsApp
-                  </a>
-                </GlassButton>
-                <Link
-                  to={openBrand.to}
+                <a
+                  href={waLink(
+                    `Hello Maish, I'm interested in ${openBrand.name} mattresses. Which sizes are available?`,
+                  )}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="bg-signal px-5 py-3 text-sm font-bold text-signal-foreground"
+                >
+                  Enquire on WhatsApp
+                </a>
+                <a
+                  href={openBrand.to}
                   onClick={() => setOpenBrand(null)}
-                  prefetchIntent="hover"
-                  className="border border-border px-5 py-3 text-sm font-bold hover:border-primary rounded-md glass-hover glass-fill"
+                  className="border border-border px-5 py-3 text-sm font-bold hover:border-primary"
                 >
                   View Page
-                </Link>
+                </a>
               </div>
             </div>
           </div>

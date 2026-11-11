@@ -1,8 +1,7 @@
-import { createFileRoute, Link } from "@tanstack/react-router";
+import { createFileRoute } from "@tanstack/react-router";
 import { useState, useEffect } from "react";
 import { X } from "lucide-react";
 import { Container, CtaBand, Reveal, SectionHead, meta } from "@/components/site";
-import { GlassButton } from "@/components/ui/glass-button";
 import { IMG } from "@/lib/site";
 
 export const Route = createFileRoute("/textiles")({
@@ -136,7 +135,7 @@ function Textiles() {
       </section>
       <Container>
         <SectionHead eyebrow="Collections" title="For Homes & Institutions" />
-        <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="grid grid-cols-2 gap-3 md:gap-5 lg:grid-cols-4">
           {textileCategories.map((cat, i) => (
             <Reveal key={cat.id} delay={i * 80}>
               <div
@@ -212,23 +211,21 @@ function Textiles() {
                 ))}
               </ul>
               <div className="mt-6 flex flex-wrap gap-3">
-                <GlassButton variant="signal" asChild>
-                  <a
-                    href={`https://wa.me/254799921036?text=${encodeURIComponent(`Hello Maish, I'd like to enquire about ${openCategory.title}.`)}`}
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    Enquire on WhatsApp
-                  </a>
-                </GlassButton>
-                <Link
-                  to={openCategory.to}
+                <a
+                  href={`https://wa.me/254799921036?text=${encodeURIComponent(`Hello Maish, I'd like to enquire about ${openCategory.title}.`)}`}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="bg-signal px-5 py-3 text-sm font-bold text-signal-foreground"
+                >
+                  Enquire on WhatsApp
+                </a>
+                <a
+                  href={openCategory.to}
                   onClick={() => setOpenCategory(null)}
-                  prefetchIntent="hover"
-                  className="border border-border px-5 py-3 text-sm font-bold hover:border-primary rounded-md glass-hover glass-fill"
+                  className="border border-border px-5 py-3 text-sm font-bold hover:border-primary"
                 >
                   View Page
-                </Link>
+                </a>
               </div>
             </div>
           </div>
