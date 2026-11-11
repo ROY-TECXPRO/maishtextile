@@ -16,6 +16,7 @@ import {
 } from "lucide-react";
 import { NAV, SITE, STATS, CATEGORIES, waLink, type Category } from "@/lib/site";
 import { QuotationRequest } from "./quotation-request";
+import { GlassButton } from "@/components/ui/glass-button";
 
 export function Reveal({
   children,
@@ -72,7 +73,7 @@ function ThemeToggle() {
     <button
       onClick={toggle}
       aria-label={dark ? "Switch to light theme" : "Switch to dark theme"}
-      className="grid h-10 w-10 place-items-center rounded-sm border border-navy-foreground/20 text-navy-foreground hover:bg-navy-foreground/10"
+      className="grid h-10 w-10 place-items-center rounded-sm border border-navy-foreground/20 text-navy-foreground glass-hover btn-press"
     >
       {dark ? <Sun className="h-4 w-4" /> : <Moon className="h-4 w-4" />}
     </button>
@@ -104,12 +105,13 @@ export function Header() {
               </span>
             </span>
           </Link>
-          <nav className="hidden items-center gap-1 xl:flex" aria-label="Main">
+          <nav className="hidden items-center gap-2 xl:flex" aria-label="Main">
             {NAV.slice(1).map((n) => (
               <Link
                 key={n.to}
                 to={n.to}
-                className="rounded-sm px-2.5 py-2 text-sm font-medium opacity-80 hover:opacity-100"
+                prefetchIntent="hover"
+                className="rounded-md px-3 py-2 text-sm font-medium opacity-80 hover:opacity-100 glass-hover"
                 activeProps={{ className: "!opacity-100 text-signal" }}
               >
                 {n.label}
@@ -118,22 +120,23 @@ export function Header() {
           </nav>
           <div className="flex items-center gap-2">
             <ThemeToggle />
-            <button
+            <GlassButton
+              variant="signal"
               onClick={() => setQuoteOpen(true)}
-              className="hidden bg-signal px-4 py-2.5 text-sm font-bold text-signal-foreground hover:brightness-110 flex items-center gap-2 sm:inline-flex"
               aria-label="Request quotation or invoice"
             >
               <FileText className="h-4 w-4" />
               Get a Quote
-            </button>
+            </GlassButton>
             <Link
               to="/contact"
-              className="hidden bg-signal px-4 py-2.5 text-sm font-bold text-signal-foreground hover:brightness-110 sm:inline-block"
+              prefetchIntent="hover"
+              className="hidden flex items-center justify-center gap-2 bg-signal text-signal-foreground rounded-md px-4 py-2.5 text-sm font-bold glass-hover glass-fill sm:inline-block"
             >
               Corporate Enquiry
             </Link>
             <button
-              className="grid h-10 w-10 place-items-center xl:hidden"
+              className="grid h-10 w-10 place-items-center rounded-md xl:hidden glass-hover btn-press"
               onClick={() => setOpen(!open)}
               aria-label="Toggle menu"
               aria-expanded={open}
@@ -151,30 +154,34 @@ export function Header() {
               <Link
                 key={n.to}
                 to={n.to}
+                prefetchIntent="hover"
                 onClick={() => setOpen(false)}
-                className="block border-b border-navy-foreground/10 px-2 py-3.5 text-base font-medium text-navy-foreground"
-                activeProps={{ className: "text-signal" }}
+                className="block border-b border-navy-foreground/10 px-4 py-3.5 text-base font-medium text-navy-foreground glass-hover rounded-md mx-1"
+                activeProps={{ className: "text-signal bg-navy/30" }}
               >
                 {n.label}
               </Link>
             ))}
             <Link
               to="/contact"
+              prefetchIntent="hover"
               onClick={() => setOpen(false)}
-              className="mt-4 block bg-signal py-3.5 text-center font-bold text-signal-foreground"
+              className="mt-4 block bg-signal text-signal-foreground rounded-md px-4 py-3.5 text-center font-bold glass-hover glass-fill mx-1"
             >
               Request a Corporate Enquiry
             </Link>
-            <button
+            <GlassButton
+              variant="signal"
+              size="lg"
+              className="mt-4 mx-1 w-full"
               onClick={() => {
                 setOpen(false);
                 setQuoteOpen(true);
               }}
-              className="mt-4 mx-2 w-full bg-signal py-3.5 text-center font-bold text-signal-foreground flex items-center justify-center gap-2"
             >
               <FileText className="h-4 w-4" />
               Get a Quote / Invoice
-            </button>
+            </GlassButton>
           </nav>
         )}
       </header>
@@ -216,7 +223,7 @@ export function Footer() {
           <ul className="mt-4 space-y-2 text-sm opacity-80">
             {NAV.slice(1).map((n) => (
               <li key={n.to}>
-                <Link to={n.to} className="hover:text-signal">
+                <Link to={n.to} prefetchIntent="hover" className="hover:text-signal">
                   {n.label}
                 </Link>
               </li>
@@ -277,7 +284,7 @@ export function BackToTop() {
         target="_blank"
         rel="noreferrer"
         aria-label="Chat on WhatsApp"
-        className="fixed bottom-5 left-5 z-40 grid h-12 w-12 place-items-center rounded-full bg-signal text-signal-foreground shadow-card"
+        className="fixed bottom-5 left-5 z-40 grid h-12 w-12 place-items-center rounded-full bg-signal text-signal-foreground shadow-card glass-hover btn-press"
       >
         <MessageCircle className="h-5 w-5" />
       </a>
@@ -285,7 +292,7 @@ export function BackToTop() {
         <button
           onClick={() => window.scrollTo({ top: 0 })}
           aria-label="Back to top"
-          className="fixed bottom-5 right-5 z-40 grid h-12 w-12 place-items-center bg-navy text-navy-foreground shadow-card"
+          className="fixed bottom-5 right-5 z-40 grid h-12 w-12 place-items-center rounded-full bg-navy text-navy-foreground shadow-card glass-hover btn-press anim-in"
         >
           <ArrowUp className="h-5 w-5" />
         </button>
@@ -479,7 +486,7 @@ export function CategoryGrid({ ids, filters = true }: { ids?: string[]; filters?
           ))}
         </div>
       )}
-      <div className="grid grid-cols-2 gap-3 md:gap-5 lg:grid-cols-3">
+      <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3">
         {shown.map((c, i) => (
           <Reveal key={c.id} delay={(i % 3) * 80}>
             <button
@@ -527,15 +534,15 @@ export function CtaBand({
           {title}
         </h2>
         <div className="flex flex-wrap gap-3">
-          <a
-            href={`tel:${SITE.phoneIntl}`}
-            className="bg-signal px-6 py-3.5 font-bold text-signal-foreground"
-          >
-            Call {SITE.phone}
-          </a>
+          <GlassButton variant="signal" asChild size="lg">
+            <a href={`tel:${SITE.phoneIntl}`}>
+              Call {SITE.phone}
+            </a>
+          </GlassButton>
           <Link
             to="/contact"
-            className="border border-primary-foreground/40 px-6 py-3.5 font-bold hover:bg-primary-foreground/10"
+            prefetchIntent="hover"
+            className="border border-primary-foreground/40 px-6 py-3.5 font-bold hover:bg-primary-foreground/10 rounded-md glass-hover glass-fill"
           >
             Send Enquiry
           </Link>

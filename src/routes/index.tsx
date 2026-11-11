@@ -9,6 +9,7 @@ import {
   Stats,
   meta,
 } from "@/components/site";
+import { GlassButton } from "@/components/ui/glass-button";
 import { EnquiryForm } from "@/components/enquiry-form";
 import { IMG } from "@/lib/site";
 
@@ -53,15 +54,19 @@ function Home() {
             from Maish in Narok, Kenya.
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
-            <a
-              href="#capabilities"
-              className="bg-signal px-7 py-4 font-bold uppercase tracking-wider text-signal-foreground hover:brightness-110"
+            <GlassButton
+              variant="signal"
+              size="lg"
+              onClick={() => {
+                document.getElementById("capabilities")?.scrollIntoView({ behavior: "smooth" });
+              }}
             >
               Explore Our Capabilities
-            </a>
+            </GlassButton>
             <Link
               to="/contact"
-              className="border border-navy-foreground/40 px-7 py-4 font-bold uppercase tracking-wider hover:bg-navy-foreground/10"
+              prefetchIntent="hover"
+              className="border border-navy-foreground/40 px-7 py-4 font-bold uppercase tracking-wider hover:bg-navy-foreground/10 rounded-md glass-hover glass-fill"
             >
               Request a Corporate Enquiry
             </Link>
@@ -100,7 +105,8 @@ function Home() {
             </p>
             <Link
               to="/about"
-              className="mt-6 inline-block font-bold uppercase tracking-wider text-primary hover:underline"
+              prefetchIntent="hover"
+              className="mt-6 inline-block font-bold uppercase tracking-wider text-primary hover:underline glass-hover"
             >
               More about us →
             </Link>
@@ -132,7 +138,8 @@ function Home() {
             <p className="mt-5 opacity-80">Bobmil · Maharaja · Primefoam · Ndovu</p>
             <Link
               to="/mattress-center"
-              className="mt-8 inline-block bg-signal px-7 py-4 font-bold uppercase tracking-wider text-signal-foreground"
+              prefetchIntent="hover"
+              className="mt-8 inline-block bg-signal text-signal-foreground rounded-md px-7 py-4 font-bold uppercase tracking-wider glass-hover glass-fill"
             >
               Explore Mattress Brands
             </Link>
