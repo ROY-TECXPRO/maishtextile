@@ -32,11 +32,11 @@ function Home() {
             loop
             playsInline
             preload="none"
-            poster="/hero-poster.webp"
+            poster="/hero-factory.webp"
             className="absolute inset-0 h-full w-full object-cover object-[30%_center]"
             aria-hidden="true"
           >
-            <source src="/showroom.mp4" type="video/mp4" />
+            <source src="/showroom.webm" type="video/webm" />
           </video>
           <div className="hero-overlay absolute inset-0" />
         </div>

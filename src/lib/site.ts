@@ -1,13 +1,13 @@
-import ppe from "@/assets/ppe.jpg";
-import school from "@/assets/school.jpg";
-import embroidery from "@/assets/embroidery.jpg";
-import ranger from "@/assets/ranger.jpg";
-import hospitality from "@/assets/hospitality.jpg";
-import bedroom from "@/assets/bedroom.jpg";
-import corporate from "@/assets/corporate.jpg";
-import fabrics from "@/assets/fabrics.jpg";
-import mattress from "@/assets/mattress.jpg";
-import factory from "@/assets/hero-factory.jpg";
+import ppe from "@/assets/ppe.webp";
+import school from "@/assets/school.webp";
+import embroidery from "@/assets/embroidery.webp";
+import ranger from "@/assets/ranger.webp";
+import hospitality from "@/assets/hospitality.webp";
+import bedroom from "@/assets/bedroom.webp";
+import corporate from "@/assets/corporate.webp";
+import fabrics from "@/assets/fabrics.webp";
+import mattress from "@/assets/mattress.webp";
+import factory from "@/assets/hero-factory.webp";
 
 /** Editable company contact configuration — only verified details supplied by the client. */
 export const SITE = {

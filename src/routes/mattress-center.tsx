@@ -42,7 +42,7 @@ const brands: MattressBrand[] = [
     name: "Maharaja",
     group: "Mattresses",
     desc: "Premium spring and orthopedic mattresses for superior comfort.",
-    imgs: ["/Spring Mattress.jpeg", "/Orthopedic spring mattress_They engineered for….jpeg"],
+    imgs: ["/Spring Mattress.webp", "/Orthopedic spring mattress_They engineered for….webp"],
     items: [
       "Spring Mattress — durable coil system",
       "Orthopedic spring mattress — engineered for spinal support",
@@ -56,7 +56,7 @@ const brands: MattressBrand[] = [
     name: "Primefoam",
     group: "Mattresses",
     desc: "High-density foam mattresses designed for deep sleep and comfort.",
-    img: "/How to Choose the Right Mattress for Deep Sleep & Comfort.jpeg",
+    img: "/How to Choose the Right Mattress for Deep Sleep & Comfort.webp",
     items: [
       "High-resilience foam core",
       "Pressure-relieving comfort layers",
@@ -70,7 +70,7 @@ const brands: MattressBrand[] = [
     name: "Ndovu",
     group: "Mattresses",
     desc: "Strong and durable mattresses built to last.",
-    imgs: ["/mattress.jpeg", "/686236062002348997.jpeg"],
+    imgs: ["/mattress.webp", "/686236062002348997.webp"],
     items: [
       "Heavy-duty spring construction",
       "Reinforced edge support",
@@ -106,11 +106,11 @@ function Mattress() {
             loop
             playsInline
             preload="metadata"
-            poster="/mattress.jpeg"
+            poster="/mattress.webp"
             className="absolute inset-0 h-full w-full object-cover object-center"
             aria-hidden="true"
           >
-            <source src="/mattress.mp4" type="video/mp4" />
+            <source src="/mattress.webm" type="video/webm" />
           </video>
           <div className="hero-overlay absolute inset-0" />
         </div>

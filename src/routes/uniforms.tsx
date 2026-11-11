@@ -30,7 +30,7 @@ const customCategories: CustomCategory[] = [
     group: "Uniforms",
     title: "Rangers & Conservancy",
     desc: "Field-ready khaki uniforms built for long days outdoors in conservancies and parks.",
-    imgs: ["/beige guide.jpeg", "/navyblue guide.jpeg"],
+    imgs: ["/beige guide.webp", "/navyblue guide.webp"],
     items: [
       "Ranger uniforms",
       "Conservancy uniforms",
@@ -46,7 +46,7 @@ const customCategories: CustomCategory[] = [
     group: "Uniforms",
     title: "Security Uniform",
     desc: "Smart, hard-wearing uniforms for security teams and professional staff.",
-    imgs: ["/824018063102049529.jpeg", "/shirt.jpeg", "/trouser.jpeg"],
+    imgs: ["/824018063102049529.webp", "/shirt.webp", "/trouser.webp"],
     items: [
       "Security guard uniforms",
       "Corporate security clothing",
@@ -61,7 +61,7 @@ const customCategories: CustomCategory[] = [
     group: "Uniforms",
     title: "Conservancy Security Combat",
     desc: "Combat-ready uniforms for conservancy security operations.",
-    imgs: ["/combat.jpeg", "/side shirt.jpeg"],
+    imgs: ["/combat.webp", "/side shirt.webp"],
     items: [
       "Combat uniforms",
       "Tactical field shirts",
@@ -77,7 +77,7 @@ const customCategories: CustomCategory[] = [
     group: "Workwear",
     title: "Safety Boot",
     desc: "Steel-toe safety boots for industrial foot protection.",
-    imgs: ["/safety boot.jpeg"],
+    imgs: ["/safety boot.webp"],
     items: [
       "Steel toe safety boots",
       "Slip-resistant work boots",
@@ -92,7 +92,7 @@ const customCategories: CustomCategory[] = [
     group: "Workwear",
     title: "PPE",
     desc: "General personal protective equipment for workplace safety.",
-    imgs: ["/PPE.jpeg"],
+    imgs: ["/PPE.webp"],
     items: [
       "Protective equipment sets",
       "Industrial safety gear",
@@ -107,7 +107,7 @@ const customCategories: CustomCategory[] = [
     group: "Workwear",
     title: "Mask",
     desc: "Protective masks for respiratory and contamination control.",
-    imgs: ["/mask.jpeg"],
+    imgs: ["/mask.webp"],
     items: [
       "Disposable protective masks",
       "Reusable respirator masks",
@@ -122,7 +122,7 @@ const customCategories: CustomCategory[] = [
     group: "Workwear",
     title: "Gloves",
     desc: "Protective gloves for hand safety in industrial work.",
-    imgs: ["/gloves.jpeg"],
+    imgs: ["/gloves.webp"],
     items: [
       "Cut-resistant work gloves",
       "Chemical protection gloves",
@@ -137,7 +137,7 @@ const customCategories: CustomCategory[] = [
     group: "Workwear",
     title: "Electro ABS",
     desc: "Electro ABS safety helmets for head protection.",
-    imgs: ["/𝗘𝗹𝗲𝗰𝘁𝗿𝗼 𝗔𝗕𝗦.jpeg"],
+    imgs: ["/𝗘𝗹𝗲𝗰𝘁𝗿𝗼 𝗔𝗕𝗦.webp"],
     items: [
       "Electrical insulation helmets",
       "Arc flash protection headgear",
@@ -152,7 +152,7 @@ const customCategories: CustomCategory[] = [
     group: "Workwear",
     title: "Baritech",
     desc: "Baritech branded safety equipment.",
-    imgs: ["/Baritech Asansör _ Logotype.jpeg"],
+    imgs: ["/Baritech Asansör _ Logotype.webp"],
     items: [
       "Baritech safety components",
       "Industrial lift safety gear",
@@ -166,7 +166,7 @@ const customCategories: CustomCategory[] = [
     group: "Workwear",
     title: "Safety Metal Gloves",
     desc: "Metal mesh gloves for cut and heat protection.",
-    imgs: ["/safety metal gloves.jpeg"],
+    imgs: ["/safety metal gloves.webp"],
     items: [
       "Stainless steel mesh gloves",
       "Cut and puncture resistant gloves",
@@ -182,7 +182,7 @@ const customCategories: CustomCategory[] = [
     group: "Workwear",
     title: "High Visibility Reflective Vest",
     desc: "Reflective safety vests for low-light visibility.",
-    imgs: ["/High Visibility Reflective Vest.jpeg"],
+    imgs: ["/High Visibility Reflective Vest.webp"],
     items: [
       "Fluorescent safety vests",
       "Reflective strip vests",
@@ -198,7 +198,7 @@ const customCategories: CustomCategory[] = [
     group: "Workwear",
     title: "Overall",
     desc: "Protective overalls for full-body coverage.",
-    imgs: ["/overall.jpeg"],
+    imgs: ["/overall.webp"],
     items: [
       "Protective work overalls",
       "Full-body coveralls",
@@ -214,7 +214,7 @@ const customCategories: CustomCategory[] = [
     group: "Workwear",
     title: "Safetboot",
     desc: "Safety boots for industrial foot protection.",
-    imgs: ["/safetboot.jpeg"],
+    imgs: ["/safetboot.webp"],
     items: [
       "Protective toe safety boots",
       "Anti-slip sole work boots",
@@ -250,11 +250,11 @@ function Uniforms() {
             loop
             playsInline
             preload="metadata"
-            poster="/beige guide.jpeg"
+            poster="/beige guide.webp"
             className="absolute inset-0 h-full w-full object-cover object-center"
             aria-hidden="true"
           >
-            <source src="/video.mp4" type="video/mp4" />
+            <source src="/video.webm" type="video/webm" />
           </video>
           <div className="hero-overlay absolute inset-0" />
         </div>

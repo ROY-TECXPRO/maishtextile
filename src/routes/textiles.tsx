@@ -30,8 +30,8 @@ const textileCategories: TextileCategory[] = [
     group: "Bedding",
     title: "Bed sheets & pillowcases",
     desc: "Quality bed sheets and pillowcases for homes and institutions.",
-    coverImg: "/bedsheets and pillows.jpeg",
-    imgs: ["/bedsheets and pillows.jpeg", "/blankets.jpeg"],
+    coverImg: "/bedsheets and pillows.webp",
+    imgs: ["/bedsheets and pillows.webp", "/blankets.webp"],
     items: [
       "Fitted and flat bed sheets",
       "Pillowcases in multiple sizes",
@@ -46,8 +46,8 @@ const textileCategories: TextileCategory[] = [
     group: "Bedding",
     title: "Duvet covers & blankets",
     desc: "Duvet covers and blankets for comfort and warmth.",
-    coverImg: "/duvet covers.jpeg",
-    imgs: ["/duvet.jpeg", "/duvets.jpeg", "/duvet covers.jpeg"],
+    coverImg: "/duvet covers.webp",
+    imgs: ["/duvet.webp", "/duvets.webp", "/duvet covers.webp"],
     items: [
       "Duvet covers with button/zip closure",
       "Lightweight and heavyweight blankets",
@@ -62,8 +62,8 @@ const textileCategories: TextileCategory[] = [
     group: "Home",
     title: "Curtains & drapes",
     desc: "Curtains and drapes for privacy and style.",
-    coverImg: "/curtainss (2).jpeg",
-    imgs: ["/curtains.jpeg", "/curtainss (2).jpeg", "/curtainss (3).jpeg"],
+    coverImg: "/curtainss (2).webp",
+    imgs: ["/curtains.webp", "/curtainss (2).webp", "/curtainss (3).webp"],
     items: [
       "Blackout and sheer curtains",
       "Custom-made drapes",
@@ -78,8 +78,8 @@ const textileCategories: TextileCategory[] = [
     group: "Materials",
     title: "Fabrics & textile materials",
     desc: "Fabric materials for uniforms, institutions and home use.",
-    coverImg: "/fabrics.jpeg",
-    imgs: ["/uniform materials.jpeg", "/mint.jpeg", "/markintosh.jpeg", "/fabrics.jpeg"],
+    coverImg: "/fabrics.webp",
+    imgs: ["/uniform materials.webp", "/mint.webp", "/markintosh.webp", "/fabrics.webp"],
     items: [
       "Uniform and workwear fabrics",
       "Mint and markintosh materials",
@@ -115,11 +115,11 @@ function Textiles() {
             loop
             playsInline
             preload="metadata"
-            poster="/bedroom.jpg"
+            poster="/bedroom.webp"
             className="absolute inset-0 h-full w-full object-cover object-center"
             aria-hidden="true"
           >
-            <source src="/videos.mp4" type="video/mp4" />
+            <source src="/videos.webm" type="video/webm" />
           </video>
           <div className="hero-overlay absolute inset-0" />
         </div>

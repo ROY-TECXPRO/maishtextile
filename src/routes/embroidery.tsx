@@ -31,7 +31,7 @@ function Embroidery() {
             className="absolute inset-0 h-full w-full object-cover object-center"
             aria-hidden="true"
           >
-            <source src="/vida.mp4" type="video/mp4" />
+            <source src="/vida.webm" type="video/webm" />
           </video>
           <div className="hero-overlay absolute inset-0" />
         </div>

@@ -45,22 +45,22 @@ const steps = [
   },
   {
     t: "Embroidery & branding",
-    imgs: ["/embroidery1.webp", "/image 1 (8).jpeg", "/embroidery3.webp"],
+    imgs: ["/embroidery1.webp", "/image 1 (8).webp", "/embroidery3.webp"],
     desc: "Logos and branding are digitized and embroidered with color-matched threads. Placement is verified against approved artwork before production runs begin.",
   },
   {
     t: "Quality inspection",
-    img: "/embroidery2.jpeg",
+    img: "/embroidery2.webp",
     desc: "Every garment passes through multi-point inspection: stitch integrity, measurements, labeling, and visual defects. Failed items are repaired or rejected per quality standards.",
   },
   {
     t: "Trimming & finishing",
-    img: "/trim.jpeg",
+    img: "/trim.webp",
     desc: "Loose threads are trimmed, seams are cleaned, and garments receive final pressing. Buttons, zippers, and fasteners are checked for secure attachment. Each piece is inspected for finish quality before packing.",
   },
   {
     t: "Finished garments ready for delivery",
-    imgs: ["/denim.jpeg", "/industry.jpeg"],
+    imgs: ["/denim.webp", "/industry.webp"],
     desc: "Approved garments are pressed, folded, poly-bagged, and packed by order. Final shipment checks confirm quantities, sizes, and documentation before dispatch.",
   },
 ];
@@ -82,7 +82,7 @@ function Manufacturing() {
             className="absolute inset-0 h-full w-full object-cover object-center"
             aria-hidden="true"
           >
-            <source src="/video 3.mp4" type="video/mp4" />
+            <source src="/video 3.webm" type="video/webm" />
           </video>
           <div className="hero-overlay absolute inset-0" />
         </div>
